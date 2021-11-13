@@ -10,15 +10,39 @@ namespace BookingApp.Model
     {
 
         public Passenger passenger { get; }
-        public int totalFare { get; }
-        public string durationOfTravel { get; }
 
-        public Booking(Passenger passenger, int totalFare, string durationOfTravel)
+        public Booking(Passenger passenger)
         {
             this.passenger = passenger;
-            this.totalFare = totalFare;
-            this.durationOfTravel = durationOfTravel;
         }
 
+        public double CalculateFare()
+        {
+            double fare = 0;
+
+            if(passenger.destination == "Cebu")
+            {
+                fare = 150 + (150 * .17);
+            } else if (passenger.destination == "Siquijor")
+            {
+                fare = 250 + (250 * .17);
+            }
+            return fare;
+        }
+
+        public string DurationOfTravel()
+        {
+            string duration = "";
+
+            if(passenger.destination == "Cebu")
+            {
+                duration = "120 minutes";
+            } else if (passenger.destination == "Siquijor")
+            {
+                duration = "5 hours";
+            }
+
+            return duration;
+        }
     }
 }

@@ -24,11 +24,11 @@
 
             <Button Grid.Column="1"
                     Margin="10 0 0 0"
-                    Content="Add booking"/>
+                    Content="Add booking"
+                    Command="{Binding MakeBookingCommand}"/>
         </Grid>
 
-        <ListView Grid.Row="1" Margin="0 25 0 0">
-            <ListViewItem/>
+        <ListView Grid.Row="1" Margin="0 25 0 0" ItemsSource="{Binding Bookings}">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
@@ -39,7 +39,7 @@
                     <GridViewColumn Header="Passenger Name">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Padding="0 0 15 0" Text="Dino"/>
+                                <TextBlock Padding="0 0 15 0" Text="{Binding PassengerName}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -47,7 +47,7 @@
                     <GridViewColumn Header="Age">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Padding="0 0 15 0" Text="25"/>
+                                <TextBlock Padding="0 0 15 0" Text="{Binding Age}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -55,7 +55,7 @@
                     <GridViewColumn Header="Date of travel">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Padding="0 0 15 0" Text="12/20/21"/>
+                                <TextBlock Padding="0 0 15 0" Text="{Binding DateOfTravel}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -63,7 +63,7 @@
                     <GridViewColumn Header="Destination">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Padding="0 0 15 0" Text="Siargao"/>
+                                <TextBlock Padding="0 0 15 0" Text="{Binding Destination}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -71,7 +71,7 @@
                     <GridViewColumn Header="Total Fare">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Padding="0 0 15 0" Text="250"/>
+                                <TextBlock Padding="0 0 15 0" Text="{Binding TotalFare}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -79,7 +79,7 @@
                     <GridViewColumn Header="Duration">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="2 hours"/>
+                                <TextBlock Text="{Binding DurationOfTravel}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

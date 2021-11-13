@@ -8,9 +8,9 @@
         mc:Ignorable="d"
         Title="Booking App" 
         FontSize="14"
-        Height="450" 
+        Height="550" 
         Width="800">
     <Grid Margin="20 10" MaxWidth="600">
-        <views:BookingListView />
+        <views:BookingListView DataContext="{Binding CurrentViewModel}"/>
     </Grid>
 </Window>
