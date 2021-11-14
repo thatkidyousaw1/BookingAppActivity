@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BookingApp.Model;
+using BookingApp.Stores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +10,20 @@ namespace BookingApp.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        public ViewModelBase CurrentViewModel { get; }
+        private readonly NavigationStore _navigationStore;
+        public ViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;
 
-        public MainViewModel()
+        public MainViewModel(NavigationStore navigationStore)
         {
-            CurrentViewModel = new BookingListViewModel();
-        } 
+            _navigationStore = navigationStore;
+
+            _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
+        }
+
+        private void OnCurrentViewModelChanged()
+        {
+            OnPropertyChanged(nameof(CurrentViewModel));
+        }
+
     }
 }

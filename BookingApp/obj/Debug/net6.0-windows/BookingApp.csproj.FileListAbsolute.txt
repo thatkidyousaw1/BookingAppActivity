@@ -4,7 +4,6 @@ C:\Users\dino\source\repos\BookingApp\BookingApp\bin\Debug\net6.0-windows\Bookin
 C:\Users\dino\source\repos\BookingApp\BookingApp\bin\Debug\net6.0-windows\BookingApp.dll
 C:\Users\dino\source\repos\BookingApp\BookingApp\bin\Debug\net6.0-windows\ref\BookingApp.dll
 C:\Users\dino\source\repos\BookingApp\BookingApp\bin\Debug\net6.0-windows\BookingApp.pdb
-C:\Users\dino\source\repos\BookingApp\BookingApp\obj\Debug\net6.0-windows\BookingApp.csproj.AssemblyReference.cache
 C:\Users\dino\source\repos\BookingApp\BookingApp\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\dino\source\repos\BookingApp\BookingApp\obj\Debug\net6.0-windows\View\BookingListView.g.cs
 C:\Users\dino\source\repos\BookingApp\BookingApp\obj\Debug\net6.0-windows\View\MakeBookingView.g.cs
@@ -25,3 +24,4 @@ C:\Users\dino\source\repos\BookingApp\BookingApp\obj\Debug\net6.0-windows\Bookin
 C:\Users\dino\source\repos\BookingApp\BookingApp\obj\Debug\net6.0-windows\BookingApp.genruntimeconfig.cache
 C:\Users\dino\source\repos\BookingApp\BookingApp\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\dino\source\repos\BookingApp\BookingApp\obj\Debug\net6.0-windows\App.baml
+C:\Users\dino\source\repos\BookingApp\BookingApp\obj\Debug\net6.0-windows\BookingApp.csproj.AssemblyReference.cache

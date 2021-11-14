@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BookingApp.Command;
+using BookingApp.Model;
+using BookingApp.Stores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,7 +40,7 @@ namespace BookingApp.ViewModel
             }
         }
 
-        private DateTime _dateOfTravel;
+        private DateTime _dateOfTravel = new DateTime(2021, 11, 20);
         public DateTime DateOfTravel
         {
             get
@@ -66,10 +69,11 @@ namespace BookingApp.ViewModel
         }
 
         public ICommand AddBooking { get; }
-
-        public MakeBookingViewModel()
+        public ICommand CancelBooking { get; }
+        public MakeBookingViewModel(TravelCompany travelCompany, NavigationService navigationService)
         {
-
+            AddBooking = new MakeBookingCommand(this, travelCompany, navigationService);
+            CancelBooking = new NavigationCommand(navigationService);
         }
     }
 }

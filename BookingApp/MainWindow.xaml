@@ -5,12 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookingApp" 
         xmlns:views="clr-namespace:BookingApp.View"
+        xmlns:viewmodels="clr-namespace:BookingApp.ViewModel"
         mc:Ignorable="d"
         Title="Booking App" 
         FontSize="14"
         Height="550" 
         Width="800">
     <Grid Margin="20 10" MaxWidth="600">
-        <views:BookingListView DataContext="{Binding CurrentViewModel}"/>
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type viewmodels:MakeBookingViewModel}">
+                <views:MakeBookingView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewmodels:BookingListViewModel}">
+                <views:BookingListView/>
+            </DataTemplate>
+        </Grid.Resources>
+
+        <ContentControl Content="{Binding CurrentViewModel}" />
     </Grid>
 </Window>
